@@ -1,0 +1,272 @@
+@font-face {
+    font-family: norse-bold;
+    src: url(fonts/Norse-Bold.otf);
+}
+
+:root {
+    --accent-color: #596D48;
+    --error-color: #ba0000;
+    --light-gray-bg: #f9fafb;
+    --medium-gray-bg: #c1c1c1;
+}
+
+* {
+    box-sizing: content-box;
+}
+
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+
+    background-color: var(--medium-gray-bg);
+    color: black;
+    font-family: sans-serif;
+}
+
+
+
+.content {
+    display: flex;
+    height: 1025px;
+    max-width: 1600px;
+}
+
+
+
+.image-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 37%;
+
+    background-image: url('images/photo-1585202900225-6d3ac20a6962.avif');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    /* gap: 5px; */
+    align-items: center;
+    justify-content: center;
+    
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+    font-family: norse-bold;
+    margin-top: 250px;
+    padding: 20px 0;
+    text-transform: capitalize;
+}
+
+.logo img {
+    height: 128px;
+}
+
+.logo span {
+    font-size: 6rem;
+}
+
+.photo-credit {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.photo-credit a {
+    color: white;
+}
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100%;
+    /* width: 906px; */
+    width: 63%;
+
+    background-color: var(--light-gray-bg);
+}
+
+
+
+.intro {
+    border-bottom: 1px solid #f5f6f7;
+    padding: 60px 50px;
+}
+
+.intro p {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.intro p:first-child {
+    margin-top: 0;
+}
+
+.intro p:last-child {
+    margin-bottom: 0;
+}
+
+
+
+.form-top {
+    background-color: white;
+    box-shadow: 0px 6px 7px 0px #ececec;
+    padding: 25px 50px;
+}
+
+.form-top p {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+@media (min-width: 1300px) {
+    .form-top-grid {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+label {
+    color: gray;
+    display: block;
+    font-size: 0.625rem;
+    font-weight: bold;;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+
+input {
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 100%;
+    padding: 5px;
+    width: 290px;
+}
+
+.input {
+    margin-bottom: 30px;
+}
+
+@media (min-width: 1300px) {
+    .input {
+        margin-bottom: 0;
+    }
+}
+
+input:focus {
+    box-shadow: 6px 6px 7px 0px #ececec;;
+    outline: 1px solid rgb(65 65 187);
+}
+
+input + span {
+    display: block;
+    position: relative;
+}
+
+button {
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 12px 46px;
+    font-weight: bold;
+}
+
+.error, .error:focus {
+    outline: 1px solid var(--error-color);
+}
+
+.error + span::after {
+    color: var(--error-color);
+    content: "* Passwords do not match";
+    font-size: 0.6rem;
+    position: absolute;
+    top: 2px;
+}
+
+.form-bottom {
+    padding: 25px 50px;
+}
+
+.form-bottom p {
+    font-size: 1em;
+}
+
+.form-bottom a {
+    color: var(--accent-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+/* .top {
+    padding-left: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 50px;
+}
+
+form p {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.form-top {
+    display: flex;
+}
+
+.form-bottom {
+    background-color: var(--light-gray-bg);
+}
+
+.bottom {
+    background-color: var(--light-gray-bg);
+    padding-left: 50px;
+}
+ */
+
+
+
+
+
+/* fieldset {
+    border: none;
+}
+
+fieldset:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+}
+
+fieldset > div {
+    padding: 0 0 35px 0;
+}
+
+fieldset:nth-child(2) {
+    background-color: gray;
+    padding: 30px 0 0 0;
+}
+
+.bottom {
+    flex: 1;
+    padding: 30px 50px;
+} */
